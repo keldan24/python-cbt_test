@@ -36,27 +36,27 @@ questions = [
     {
         "question": "Which gas do plants absorb from the atmosphere?",
         "options": ["a) Oxygen", "b) Carbon Dioxide", "c) Nitrogen", "d) Hydrogen"],
-        "correct_answer": "b" or "B"
+        "correct_ans": "b" or "B"
     },
     {
         "question": "What is the largest mammal in the world?",
         "options": ["a) Elephant", "b) Giraffe", "c) Blue Whale", "d) Lion"],
-        "correct_answer": "c" or "C"
+        "correct_ans": "c" or "C"
     },
     {
         "question": "What is the capital of France?",
         "options": ["a) Paris", "b) London", "c) Berlin", "d) Madrid"],
-        "correct_answer": "a" or "A"
+        "correct_ans": "a" or "A"
     },
     {
         "question": "Which country colonised Nigeria?",
         "options": ["a) USA", "b) Great Britain", "c) France", "d) Italy"],
-        "correct_answer": "b" or "B"        
+        "correct_ans": "b" or "B"        
     }, 
     {
         "question": "Where does the pope stays?",
         "options": ["a) Paris", "b) Las vegas", "c) Berlin", "d) Rome"],
-        "correct_answer": "d" or "D"        
+        "correct_ans": "d" or "D"        
     }   
 ]
 
