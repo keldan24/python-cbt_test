@@ -1,28 +1,11 @@
-'''import random
-value = input("Press any key to start or type quit to cancel")
+import random
+value = input("Press any key to start or type quit to cancel: ")
 while value != quit:
      print("Answer the following questions")
      break
-score = 0'''
-import random
 
 
-def questions_list(question, options, correct_ans):
-    print(question)
-    for i, option in options:
-        print(random(f"{i}.{option}"))
-    user_answer = str(input("Enter your answer (a/b/c/d): "))
-    try:
-        if user_answer == correct_ans:
-            return score +1
-        else:
-            return score +0
-    except ValueError:
-        print("Input the correct value")  
-    except TypeError:
-        print("Input the right value")
-    except:
-        print("Unknown Error")             
+            
             
 questions = [
     {
@@ -49,14 +32,49 @@ questions = [
         "question":"What are the primary colors",
         "options":["a) Red, Blue and Green", "b) Red, Green and purple", "c) White, Black and Brown"],
         "correct_ans": "a" or "A"
-    }
+    },
+    {
+        "question": "Which gas do plants absorb from the atmosphere?",
+        "options": ["a) Oxygen", "b) Carbon Dioxide", "c) Nitrogen", "d) Hydrogen"],
+        "correct_answer": "b" or "B"
+    },
+    {
+        "question": "What is the largest mammal in the world?",
+        "options": ["a) Elephant", "b) Giraffe", "c) Blue Whale", "d) Lion"],
+        "correct_answer": "c" or "C"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": ["a) Paris", "b) London", "c) Berlin", "d) Madrid"],
+        "correct_answer": "a" or "A"
+    },
+    {
+        "question": "Which country colonised Nigeria?",
+        "options": ["a) USA", "b) Great Britain", "c) France", "d) Italy"],
+        "correct_answer": "b" or "B"        
+    }, 
+    {
+        "question": "Where does the pope stays?",
+        "options": ["a) Paris", "b) Las vegas", "c) Berlin", "d) Rome"],
+        "correct_answer": "d" or "D"        
+    }   
 ]
-         
-#print(questions[1]["question"])
-score = 0
-#for i, q in questions:
-    #print(f"Question {i}:")
-    #score += questions_list(q["question"], q["options"], q["correct_ans"])
 
-#print(f"You scored {score} out of {len(questions)} questions.")
-#questions()
+random_questions = random.sample(questions, 5)
+
+score = 0
+
+for i, x in enumerate(random_questions, start=1):
+    print("Question", i, ":", x['question'])
+    for y, option in enumerate(x['options'], start=1):
+        print(chr(96 + j).upper() + ". " + option)
+    while True:
+        user_choice = input("Enter the letter of your answer (a/b/c/d): ").lower()
+        if user_choice in ["a","b","c","d","A","B","C","D"]:
+            if user_choice == x["correct_ans"]:
+                score += 1
+            break    
+        else:
+            print("Input a valid option (a/b/c/d) ")
+print("You scored", score, "out of 5 questions.")         
+
