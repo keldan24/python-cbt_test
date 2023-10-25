@@ -1,3 +1,3 @@
 print("Hafa bro")
 
-print("Life")
+print("Life is good")
