@@ -67,7 +67,7 @@ score = 0
 for i, x in enumerate(random_questions, start=1):
     print("Question", i, ":", x['question'])
     for y, option in enumerate(x['options'], start=1):
-        print(chr(96 + j).upper() + ". " + option)
+        print(chr(96 + y).upper() + ". " + option)
     while True:
         user_choice = input("Enter the letter of your answer (a/b/c/d): ").lower()
         if user_choice in ["a","b","c","d","A","B","C","D"]:
