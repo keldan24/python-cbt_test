@@ -65,16 +65,16 @@ random_questions = random.sample(questions, 5)
 score = 0
 
 for i, x in enumerate(random_questions, start=1):
-    print("Question", i, ":", x['question'])
-    for y, option in enumerate(x['options'], start=1):
-        print(chr(96 + y).upper() + ". " + option)
+    print("No.", i, ":", x["question"])
+    for y, option in enumerate(x["options"], start=1):
+        print(option)
     while True:
-        user_choice = input("Enter the letter of your answer (a/b/c/d): ").lower()
+        user_choice = input("Enter the letter of your answer (a/b/c/d): ")
         if user_choice in ["a","b","c","d","A","B","C","D"]:
             if user_choice == x["correct_ans"]:
                 score += 1
             break    
         else:
             print("Input a valid option (a/b/c/d) ")
-print("You scored", score, "out of 5 questions.")         
+print("You scored", score, "out of 5 questions.")          
 
